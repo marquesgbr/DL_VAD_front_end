@@ -133,7 +133,6 @@
     "spatial_2",
     "spatial_3"
   ],
-  "seq_len": 120,
   "extra_scaling_applied": false,
   "note": "Input CSV already normalized in chime6_pds_pipeline.ipynb"
 }
