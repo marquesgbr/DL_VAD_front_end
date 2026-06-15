@@ -1,0 +1,14 @@
+{
+  "objective_metric": "auroc",
+  "direction": "maximize",
+  "best_value": 0.873606958412612,
+  "best_params": {
+    "hidden_dim": 256,
+    "num_layers": 4,
+    "dropout_rate": 0.24826932068680582,
+    "lr": 8.956446013172227e-05,
+    "batch_size": 8,
+    "stride": 100
+  },
+  "n_trials": 100
+}

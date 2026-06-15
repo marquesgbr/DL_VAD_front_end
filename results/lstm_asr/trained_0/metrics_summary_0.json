@@ -1,0 +1,74 @@
+{
+  "best_params": {
+    "hidden_dim": 256,
+    "num_layers": 4,
+    "dropout_rate": 0.24826932068680582,
+    "lr": 8.956446013172227e-05,
+    "batch_size": 8,
+    "stride": 100
+  },
+  "seq_len": 100,
+  "feature_count": 132,
+  "metrics": [
+    {
+      "accuracy": 0.9005013077593723,
+      "precision": 0.9876435346979531,
+      "recall": 0.9067262518620374,
+      "f1": 0.9454567178445547,
+      "auroc": 0.8898357834261386,
+      "confusion_matrix": {
+        "tn": 350,
+        "fp": 99,
+        "fn": 814,
+        "tp": 7913
+      },
+      "split": "train",
+      "n_records": 9176
+    },
+    {
+      "accuracy": 0.8777027027027027,
+      "precision": 0.9819324430479183,
+      "recall": 0.8877840909090909,
+      "f1": 0.9324878776575904,
+      "auroc": 0.8136343907828284,
+      "confusion_matrix": {
+        "tn": 49,
+        "fp": 23,
+        "fn": 158,
+        "tp": 1250
+      },
+      "split": "val",
+      "n_records": 1480
+    },
+    {
+      "accuracy": 0.7894828791055206,
+      "precision": 0.8262694922031187,
+      "recall": 0.9248153949429403,
+      "f1": 0.8727695069158484,
+      "auroc": 0.7279111791812388,
+      "confusion_matrix": {
+        "tn": 386,
+        "fp": 869,
+        "fn": 336,
+        "tp": 4133
+      },
+      "split": "evaluation",
+      "n_records": 5724
+    },
+    {
+      "accuracy": 0.7938504542278128,
+      "precision": 0.8341013824884793,
+      "recall": 0.9220376522702104,
+      "f1": 0.8758678729223648,
+      "auroc": 0.7152248684881842,
+      "confusion_matrix": {
+        "tn": 381,
+        "fp": 828,
+        "fn": 352,
+        "tp": 4163
+      },
+      "split": "test",
+      "n_records": 5724
+    }
+  ]
+}
