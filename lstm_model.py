@@ -70,6 +70,7 @@ class LSTMClassifier(nn.Module):
     hidden_dim   : dimensão do estado oculto do LSTM
     num_layers   : número de camadas LSTM empilhadas
     dropout_rate : dropout aplicado entre camadas e antes do head FC
+    batch_norm   : habilita BatchNorm1d no vetor do último timestep
     """
 
     def __init__(
@@ -79,11 +80,13 @@ class LSTMClassifier(nn.Module):
         num_layers: int = 2,
         dropout_rate: float = 0.3,
         output_dim: int = 2,
+        batch_norm: bool = False,
     ) -> None:
         super().__init__()
         if output_dim not in (1, 2):
             raise ValueError("output_dim must be 1 or 2 for binary classification.")
         self.output_dim = output_dim
+        self.batch_norm_enabled = bool(batch_norm)
         self.lstm = nn.LSTM(
             input_size=input_dim,
             hidden_size=hidden_dim,
@@ -91,6 +94,7 @@ class LSTMClassifier(nn.Module):
             batch_first=True,
             dropout=dropout_rate if num_layers > 1 else 0.0,
         )
+        self.batch_norm = nn.BatchNorm1d(hidden_dim) if self.batch_norm_enabled else nn.Identity()
         self.dropout = nn.Dropout(dropout_rate)
         self.fc1 = nn.Linear(hidden_dim, hidden_dim // 2)
         self.relu = nn.ReLU()
@@ -108,6 +112,7 @@ class LSTMClassifier(nn.Module):
         """
         lstm_out, _ = self.lstm(x)          # (batch, seq_len, hidden_dim)
         last = lstm_out[:, -1, :]           # último timestep
+        last = self.batch_norm(last)        # normalização opcional no embedding temporal
         out = self.dropout(last)
         out = self.relu(self.fc1(out))
         return self.fc2(out)

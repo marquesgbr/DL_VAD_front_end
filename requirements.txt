@@ -1,7 +1,6 @@
 --extra-index-url https://download.pytorch.org/whl/cu124
 torch==2.6.0+cu124
 
-torchvision>=0.17
 optuna>=3.0
 matplotlib>=3.8
 pandas>=2.2
