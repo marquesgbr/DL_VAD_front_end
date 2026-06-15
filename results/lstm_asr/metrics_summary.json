@@ -8,6 +8,7 @@
     "stride": 100
   },
   "seq_len": 100,
+  "score_threshold": 0.72,
   "feature_count": 132,
   "metrics": [
     {
@@ -26,21 +27,6 @@
       "n_records": 9176
     },
     {
-      "accuracy": 0.8777027027027027,
-      "precision": 0.9819324430479183,
-      "recall": 0.8877840909090909,
-      "f1": 0.9324878776575904,
-      "auroc": 0.8136343907828284,
-      "confusion_matrix": {
-        "tn": 49,
-        "fp": 23,
-        "fn": 158,
-        "tp": 1250
-      },
-      "split": "val",
-      "n_records": 1480
-    },
-    {
       "accuracy": 0.7894828791055206,
       "precision": 0.8262694922031187,
       "recall": 0.9248153949429403,
@@ -52,7 +38,7 @@
         "fn": 336,
         "tp": 4133
       },
-      "split": "evaluation",
+      "split": "val",
       "n_records": 5724
     },
     {
