@@ -10,7 +10,6 @@ Backend ASR:
 - Hugging Face Transformers (Whisper)
 
 Observação:
-- Este módulo é baseline acadêmico para validação do pipeline de ASR.
 - O objetivo aqui é ter uma referência reproduzível e leve de integração.
 """
 

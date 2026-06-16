@@ -1,0 +1,31 @@
+{"original_full": {
+    "start_sec":0.0,
+    "end_sec":9546.976,
+    "duration_sec":9546.976,
+    "wer":0.5746679046,
+    "edits":51029.0,
+    "ref_words":28004.0,
+    "hyp_words":23990.0,
+    "cer":0.4833985393,
+    "ref_chars":105563.0,
+    "hyp_chars":92788.0,
+    "asr_json":"S01_U06_original_full-openai_whisper-medium.en.json",
+    "ref_json":"S01.json",
+    "variant":"original"
+}, 
+"trimmed_full": {
+    "start_sec":0.0,
+    "end_sec":6665.408,
+    "duration_sec":6665.408,
+    "wer":0.7874081333,
+    "edits":51780.0,
+    "ref_words":20410.0,
+    "hyp_words":17266.0,
+    "cer":0.6700917526,
+    "ref_chars":77273.0,
+    "hyp_chars":65301.0,
+    "asr_json":"S01_U06_trimmed_full-openai_whisper-medium.en.json",
+    "ref_json":"S01.json",
+    "variant":"trimmed"
+    }
+}
