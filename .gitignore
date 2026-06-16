@@ -1,3 +1,11 @@
+# workspace trash
+.tmp.driveupload/
+*.ini 
+*.wav
+*_dev.csv
+*_eval.csv
+*_test.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
